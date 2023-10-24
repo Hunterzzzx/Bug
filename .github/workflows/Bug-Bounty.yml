@@ -16,9 +16,9 @@ jobs:
     - name: Download Subfinder, Nuclei, and Waybackurls
       run: |
         # Download Subfinder, Nuclei, and Waybackurls
-        wget https://github.com/projectdiscovery/subfinder/releases/download/v2.6.0/subfinder-linux-amd64 -O subfinder
-        wget https://github.com/projectdiscovery/nuclei/releases/download/v2.6.0/nuclei-linux-amd64 -O nuclei
-        wget https://github.com/tomnomnom/waybackurls/releases/download/v2.1.0/waybackurls-linux-amd64 -O waybackurls
+        go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest -O subfinder
+        go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest -O nuclei
+        go install github.com/tomnomnom/waybackurls@latest -O waybackurls
 
         # Make the downloaded binaries executable
         chmod +x subfinder nuclei waybackurls
