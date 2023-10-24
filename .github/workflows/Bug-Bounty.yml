@@ -56,6 +56,4 @@ jobs:
         chat_id="YOUR_CHAT_ID"
         message="Nuclei scan results are ready!"
         curl -s -X POST "https://api.telegram.org/bot${6410502940:AAEDKnie7shfsE19CSFaA2Zs0sSlqhuipMo}/sendMessage" -d "chat_id=${-4085735392}" -d "text=${cat result-nuclei.txt}"
-      env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.6410502940:AAEDKnie7shfsE19CSFaA2Zs0sSlqhuipMo }}
-        TELEGRAM_CHAT_ID: ${{ secrets.-4085735392 }}
+      
